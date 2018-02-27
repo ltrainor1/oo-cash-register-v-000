@@ -21,7 +21,8 @@ def apply_discount
   if @discount == 0 
     message = "There is no discount to apply."
   else 
-    @total = @total * ((100 - @discount)/100) 
+    discount = @total * discount 
+    @total = @total - discount  
     message = "After the discount, the total comes to $#{@total}."
 end 
 message
