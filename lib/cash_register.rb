@@ -12,7 +12,10 @@ def initialize(discount = 0)
 end 
 
 def add_item(item, price, quantity = 1)
-  @@items << item 
+  i = 0 
+  while i < quantity 
+    @@items << item 
+  end 
   add_on = price * quantity
   @@prices << add_on
   @total += add_on
