@@ -17,7 +17,7 @@ def add_item(item, price, quantity = 1)
   @total += add_on
 end 
 
-def self.apply_discount
+def apply_discount
   if @discount == 0 
     message = "There is no discount to apply."
   else 
