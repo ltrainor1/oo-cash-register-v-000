@@ -15,6 +15,7 @@ def add_item(item, price, quantity = 1)
   i = 0 
   while i < quantity 
     @@items << item 
+    i += 1 
   end 
   add_on = price * quantity
   @@prices << add_on
