@@ -8,11 +8,11 @@ class CashRegister
 def initialize(discount = 0)
   @total = 0 
   @discount = discount
-  @@items.
+  @@items.clear 
 end 
 
 def add_item(item, price, quantity = 1)
-  @items << item 
+  @@items << item 
   add_on = price * quantity
   @@prices << add_on
   @total += add_on
@@ -30,11 +30,11 @@ message
 end 
 
 def items 
-  @items 
+  @@items 
 end 
 
 def void_last_transaction 
-  @items.pop
+  @@items.pop
 
   @total = total - @@prices.last 
   @@prices.pop
